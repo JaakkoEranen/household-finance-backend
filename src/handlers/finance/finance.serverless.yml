@@ -1,0 +1,50 @@
+getFinance:
+  handler: src/handlers/finance/getFinance.handler
+  events:
+    - http:
+        path: finance/{id}/date/{date}
+        method: get
+        cors: true
+        authorizer:
+            name: authorizer
+            # arn: Pool ARN
+getMonthFinance:
+  handler: src/handlers/finance/getFinance.handler
+  events:
+    - http:
+        path: finance/{id}/month/{month}
+        method: get
+        cors: true
+        authorizer:
+            name: authorizer
+            # arn: Pool ARN
+addFinance:
+  handler: src/handlers/finance/addFinance.handler
+  events:
+    - http:
+        path: finance
+        method: post
+        cors: true
+        authorizer:
+            name: authorizer
+            # arn: Pool ARN
+updateFinance:
+  handler: src/handlers/finance/updateFinance.handler
+  events:
+    - http:
+        path: finance/{id}/date/{date}
+        method: put
+        cors: true
+        authorizer:
+            name: authorizer
+            # arn: Pool ARN
+deleteFinance:
+  handler: src/handlers/finance/deleteFinance.handler
+  events:
+    - http:
+        path: finance/{id}/date/{date}
+        method: delete
+        cors: true
+        authorizer:
+            name: authorizer
+            # arn: Pool ARN

@@ -1,0 +1,50 @@
+groups:
+  handler: src/handlers/groups/listGroups.handler
+  events:
+    - http:
+        path: groups
+        method: get
+        cors: true
+        authorizer:
+            name: authorizer
+            # arn: Pool ARN
+getGroup:
+  handler: src/handlers/groups/getGroup.handler
+  events:
+    - http:
+        path: groups/{id}
+        method: get
+        cors: true
+        authorizer:
+            name: authorizer
+            # arn: Pool ARN
+addGroup:
+  handler: src/handlers/groups/addGroup.handler
+  events:
+    - http:
+        path: groups
+        method: post
+        cors: true
+        authorizer:
+            name: authorizer
+            # arn: Pool ARN
+updateGroup:
+  handler: src/handlers/groups/updateGroup.handler
+  events:
+    - http:
+        path: groups/{id}
+        method: put
+        cors: true
+        authorizer:
+            name: authorizer
+            # arn: Pool ARN
+deleteGroup:
+  handler: src/handlers/groups/deleteGroup.handler
+  events:
+    - http:
+        path: groups/{id}
+        method: delete
+        cors: true
+        authorizer:
+            name: authorizer
+            # arn: Pool ARN

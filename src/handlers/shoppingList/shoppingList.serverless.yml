@@ -1,0 +1,50 @@
+getShoppingList:
+  handler: src/handlers/shoppingList/getShoppingList.handler
+  events:
+    - http: 
+        path: shopping-list/{id}/date/{date}
+        method: get
+        cors: true
+        authorizer:
+            name: authorizer
+            # arn: Pool ARN
+getShoppingListMonth:
+  handler: src/handlers/shoppingList/getShoppingList.handler
+  events:
+    - http:
+        path: shopping-list/{id}/month/{month}
+        method: get
+        cors: true
+        authorizer:
+            name: authorizer
+            # arn: Pool ARN
+addShoppingList:
+  handler: src/handlers/shoppingList/addShoppingList.handler
+  events:
+    - http:
+        path: shopping-list
+        method: post
+        cors: true
+        authorizer:
+            name: authorizer
+            # arn: Pool ARN
+updateShoppingList:
+  handler: src/handlers/shoppingList/updateShoppingList.handler
+  events:
+    - http:
+        path: shopping-list/{id}/date/{date}
+        method: put
+        cors: true
+        authorizer:
+            name: authorizer
+            # arn: Pool ARN
+deleteShoppingList:
+  handler: src/handlers/shoppingList/deleteShoppingList.handler
+  events:
+    - http:
+        path: shopping-list/{id}/date/{date}
+        method: delete
+        cors: true
+        authorizer:
+            name: authorizer
+            # arn: Pool ARN

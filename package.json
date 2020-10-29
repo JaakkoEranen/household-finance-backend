@@ -1,0 +1,22 @@
+{
+  "name": "household-finance-backend",
+  "version": "1.0.0",
+  "description": "Home financial management software backend",
+  "author": "Jaakko Eränen",
+  "license": "MIT",
+  "dependencies": {
+    "@serverless/safeguards-plugin": "^1.0.1",
+    "aws-sdk": "^2.548.0",
+    "dotenv": "^8.1.0",
+    "jest": "^24.9.0",
+    "serverless": "^2.2.0",
+    "serverless-dotenv-plugin": "^3.0.0",
+    "serverless-dynamodb-local": "^0.2.39",
+    "serverless-offline": "^5.12.0"
+  },
+  "scripts": {
+    "sls": "serverless",
+    "seed": "node ./seed/runner.js",
+    "start": "sls offline start --noAuth"
+  }
+}
