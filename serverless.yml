@@ -50,7 +50,6 @@ package:
   excludeDevDependencies: false
   exclude:
     - .dynamodb/**
-    - seed
     - node_modules/**
     - '!node_modules/dotenv/**'
     - '!node_modules/dotenv-expand/**'

@@ -16,7 +16,6 @@
   },
   "scripts": {
     "sls": "serverless",
-    "seed": "node ./seed/runner.js",
     "start": "sls offline start --noAuth"
   }
 }
